@@ -5,6 +5,7 @@ def tokens_lowercase(doc):
     #lowercases, removes words with less than 2 and more than 5  characters
     #performs stemming and creates trigrams (name the final call to ana.analyze as "trigrams")
     '''Place your code here'''
+    tok = metapy.analyzers.ICUTokenizer()
     
     #leave the rest of the code as is
     tok.set_content(doc.content())

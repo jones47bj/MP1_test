@@ -8,7 +8,7 @@ def tokens_lowercase(doc):
     tok = metapy.analyzers.ICUTokenizer(suppress_tags=True)
     tok = metapy.analyzers.LengthFilter(tok, min=2, max=5)
     tok = metapy.analyzers.LowercaseFilter(tok)
-    tok = metapy.analyzers.NGramWordAnalyzer(3, tok)
+    ana = metapy.analyzers.NGramWordAnalyzer(3, tok)
     #tok = tok.lower
     #tok = metapy.analyzers.Porter2Filter(tok)
     
